@@ -1,26 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Social from './Social';
 
-const styles = {
-  root: {
-    marginBottom: 40,
-  },
-};
-
 export default props => (
-  <header style={styles.root}>
-    <h1>
-      <a
-        href="/"
-        onClick={(e) => {
-          e.preventDefault();
-          alert('OMG');
-          // props.dispatch(push('/'));
-        }}
-      >
-        Lupo Montero
-      </a>
-    </h1>
+  <header>
+    <h1><Link to="/">Lupo Montero</Link></h1>
     <Social {...props} />
   </header>
 );

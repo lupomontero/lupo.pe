@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { CommentCount } from 'disqus-react';
 
 const PostSummary = ({ post }) => (
-  <div style={{ borderTop: '1px solid #006666', paddingBottom: 20 }}>
+  <article>
     <h3>
       <Link to={post.id}>
         {post.title}
@@ -17,14 +17,14 @@ const PostSummary = ({ post }) => (
     }}>
       ...
     </CommentCount>
-  </div>
+  </article>
 );
 
 export default ({ posts }) => (
-  <div>
+  <section className="Blog">
     <h2>Blog Archive</h2>
     {posts.map(post => (
       <PostSummary key={post.id} post={post} />
     ))}
-  </div>
+  </section>
 );

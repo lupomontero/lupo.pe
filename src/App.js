@@ -5,7 +5,7 @@ import Header from './components/Header';
 import Home from './components/Home';
 import Post from './components/Post';
 
-export default (props) => console.log(props) || (
+export default props => (
   <Router>
     <ScrollToTop>
       <div className="App">
