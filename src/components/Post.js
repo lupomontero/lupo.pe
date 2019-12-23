@@ -1,5 +1,5 @@
 import React from 'react';
-import { connect } from 'react-redux';
+import { useParams } from 'react-router-dom';
 import { DiscussionEmbed } from 'disqus-react';
 
 const styles = {
@@ -10,20 +10,19 @@ const styles = {
   },
 };
 
-export const Post = ({ post }) => (
-  <div className="post" style={styles.root}>
-    <h1>{post.title}</h1>
-    <p>{post.publishedAt}</p>
-    <div dangerouslySetInnerHTML={{ __html: post.body }} />
-    <DiscussionEmbed shortname={'lupomontero'} config={{
-      url: post.url,
-      identifier: post.id,
-      title: post.title,
-    }} />
-  </div>
-);
-
-
-export default connect(({ blog }, { match }) => ({
-  post: blog.posts.find(post => post.id === match.params.id),
-}))(Post);
+export default ({ posts }) => {
+  const { id } = useParams();
+  const post = posts.find(p => p.id === id);
+  return (
+    <div className="post" style={styles.root}>
+      <h1>{post.title}</h1>
+      <p>{post.publishedAt}</p>
+      <div dangerouslySetInnerHTML={{ __html: post.body }} />
+      <DiscussionEmbed shortname={'lupomontero'} config={{
+        url: post.url,
+        identifier: post.id,
+        title: post.title,
+      }} />
+    </div>
+  );
+};

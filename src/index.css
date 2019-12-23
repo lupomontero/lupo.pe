@@ -37,6 +37,13 @@ pre {
   color: #999;
 }
 
+.App {
+  padding: 30px;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
 .social-icon svg path {
   fill: #009688;
 }

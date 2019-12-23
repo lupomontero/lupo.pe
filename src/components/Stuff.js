@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 const styles = (item) => ({
   container: {
     display: 'flex',
@@ -22,7 +21,6 @@ const styles = (item) => ({
     alignItems: 'center',
   }
 });
-
 
 export default props => (
   <React.Fragment>

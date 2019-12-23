@@ -1,16 +1,10 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import Stuff from './Stuff';
 import Blog from './Blog';
 
-export const Home = props => (
+export default props => (
   <div>
     <Stuff {...props} />
-    <Blog />
+    <Blog {...props} />
   </div>
 );
-
-export default connect(({ social, stuff }) => ({
-  social,
-  stuff,
-}))(Home);

@@ -83,6 +83,14 @@ const main = (cb) => {
     const html = marked.parser(body);
 
     return { ...meta, body: html };
+  }).sort((a, b) => {
+    if (a.publishedAt < b.publishedAt) {
+      return 1;
+    } else if (a.publishedAt > b.publishedAt) {
+      return -1;
+    } else {
+      return 0;
+    }
   });
 
   fs.writeFileSync(

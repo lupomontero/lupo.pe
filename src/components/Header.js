@@ -1,6 +1,4 @@
 import React from 'react';
-import { connect } from 'react-redux';
-import { push } from 'react-router-redux';
 import Social from './Social';
 
 const styles = {
@@ -9,14 +7,15 @@ const styles = {
   },
 };
 
-export const Header = props => (
+export default props => (
   <header style={styles.root}>
     <h1>
       <a
         href="/"
         onClick={(e) => {
           e.preventDefault();
-          props.dispatch(push('/'));
+          alert('OMG');
+          // props.dispatch(push('/'));
         }}
       >
         Lupo Montero
@@ -25,5 +24,3 @@ export const Header = props => (
     <Social {...props} />
   </header>
 );
-
-export default connect(({ social }) => ({ social }))(Header);

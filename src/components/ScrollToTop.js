@@ -2,7 +2,7 @@
 // HOC que envuelve rutas para asegurar que se haga "scroll to top" cuando
 // navegamos a una nueva ruta.
 //
-// Este componente se usa una sola vez en containers/app.js
+// Este componente se usa una sola vez en App.js
 //
 // Ver: https://reacttraining.com/react-router/web/guides/scroll-restoration
 //
@@ -10,7 +10,6 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import { withRouter } from 'react-router';
 
 
 class ScrollToTop extends React.Component {
@@ -38,4 +37,4 @@ ScrollToTop.propTypes = {
 };
 
 
-export default withRouter(ScrollToTop);
+export default ScrollToTop;

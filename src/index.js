@@ -1,44 +1,22 @@
-import './index.css';
-
-
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
-import { Route } from 'react-router';
-import { ConnectedRouter } from 'react-router-redux';
-import history from './history';
-import store from './store';
-import ScrollToTop from './components/ScrollToTop';
-import Header from './components/Header';
-import Home from './components/Home';
-import Post from './components/Post';
-import registerServiceWorker from './registerServiceWorker';
-
-
-const styles = {
-  root: {
-    padding: 30,
-    textAlign: 'center',
-    maxWidth: 900,
-    margin: '0 auto',
-  },
-};
-
+import './index.css';
+import App from './App';
+import posts from './data/posts.json';
+import social from './data/social.json';
+import stuff from './data/stuff.json';
+import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
-  <Provider store={store}>
-    <ConnectedRouter history={history}>
-      <ScrollToTop>
-        <div style={styles.root}>
-          <Header />
-          <Route exact path="/" component={Home}/>
-          <Route path="/:id" component={Post}/>
-        </div>
-      </ScrollToTop>
-    </ConnectedRouter>
-  </Provider>,
+  <App
+    posts={posts}
+    social={social}
+    stuff={stuff}
+  />,
   document.getElementById('root'),
 );
 
-
-registerServiceWorker();
+// If you want your app to work offline and load faster, you can change
+// unregister() to register() below. Note this comes with some pitfalls.
+// Learn more about service workers: https://bit.ly/CRA-PWA
+serviceWorker.register();

@@ -1,17 +1,13 @@
 import React from 'react';
-import { connect } from 'react-redux';
-import { push } from 'react-router-redux';
+import { Link } from 'react-router-dom';
 import { CommentCount } from 'disqus-react';
 
-const PostSummary = ({ post, dispatch }) => (
+const PostSummary = ({ post }) => (
   <div style={{ borderTop: '1px solid #006666', paddingBottom: 20 }}>
     <h3>
-      <a href={post.id} onClick={e => {
-        e.preventDefault();
-        dispatch(push(`/${post.id}`));
-      }}>
+      <Link to={post.id}>
         {post.title}
-      </a>
+      </Link>
     </h3>
     <span>{post.publishedAt} | </span>
     <CommentCount shortname={'lupomontero'} config={{
@@ -24,23 +20,11 @@ const PostSummary = ({ post, dispatch }) => (
   </div>
 );
 
-export const Blog = ({ posts, dispatch }) => (
+export default ({ posts }) => (
   <div>
     <h2>Blog Archive</h2>
     {posts.map(post => (
-      <PostSummary key={post.id} post={post} dispatch={dispatch} />
+      <PostSummary key={post.id} post={post} />
     ))}
   </div>
 );
-
-export default connect(({ blog }) => ({
-  posts: blog.posts.sort((a, b) => {
-    if (a.publishedAt < b.publishedAt) {
-      return 1;
-    } else if (a.publishedAt > b.publishedAt) {
-      return -1;
-    } else {
-      return 0;
-    }
-  }),
-}))(Blog);
