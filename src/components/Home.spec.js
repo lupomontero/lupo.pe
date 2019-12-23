@@ -4,6 +4,6 @@ import Home from './Home';
 
 it('renders without crashing', () => {
   const div = document.createElement('div');
-  ReactDOM.render(<Home />, div);
+  ReactDOM.render(<Home stuff={[]} posts={[]} />, div);
   ReactDOM.unmountComponentAtNode(div);
 });

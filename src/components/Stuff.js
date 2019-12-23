@@ -1,10 +1,10 @@
 import React from 'react';
 
-export default props => (
+export default ({ stuff }) => (
   <div className="Stuff">
     <h2>Stuff</h2>
     <div>
-      {props.stuff.map(item => (
+      {stuff.map(item => (
         <a
           key={item.title}
           style={{
