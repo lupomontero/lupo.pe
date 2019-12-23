@@ -13,11 +13,10 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "./blog/build.js && react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
-    "predeploy": "react-scripts build",
-    "deploy": "firebase deploy --only hosting --project lupo-pe"
+    "build": "react-scripts build",
+    "build:blog": "./blog/build.js",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
   "browserslist": {
     "production": [
