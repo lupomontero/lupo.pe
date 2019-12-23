@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default props => (
+const Social = props => (
   <div className="Social">
     {props.social.map(item => (
       <div key={item.title}>
@@ -16,3 +16,5 @@ export default props => (
     ))}
   </div>
 );
+
+export default Social;

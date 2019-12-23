@@ -5,20 +5,21 @@ import Header from './components/Header';
 import Home from './components/Home';
 import Post from './components/Post';
 
-export default props => (
-  <Router>
-    <ScrollToTop>
-      <div className="App">
-        <Header social={props.social} />
-        <Switch>
-          <Route exact path="/">
-            <Home {...props} />
-          </Route>
-          <Route path="/:id">
-            <Post {...props} />
-          </Route>
-        </Switch>
-      </div>
-    </ScrollToTop>
-  </Router>
+const App = ({ posts, social, stuff }) => (
+  <div className="App">
+    <Router>
+      <ScrollToTop />
+      <Header social={social} />
+      <Switch>
+        <Route exact path="/">
+          <Home stuff={stuff} posts={posts} />
+        </Route>
+        <Route path="/:id">
+          <Post posts={posts} />
+        </Route>
+      </Switch>
+    </Router>
+  </div>
 );
+
+export default App;

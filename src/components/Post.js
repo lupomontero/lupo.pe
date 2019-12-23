@@ -2,7 +2,7 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import { DiscussionEmbed } from 'disqus-react';
 
-export default ({ posts }) => {
+const Post = ({ posts }) => {
   const { id } = useParams();
   const post = posts.find(p => p.id === id);
   return (
@@ -18,3 +18,5 @@ export default ({ posts }) => {
     </div>
   );
 };
+
+export default Post;

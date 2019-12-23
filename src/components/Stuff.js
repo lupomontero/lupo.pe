@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default ({ stuff }) => (
+const Stuff = ({ stuff }) => (
   <div className="Stuff">
     <h2>Stuff</h2>
     <div>
@@ -20,3 +20,5 @@ export default ({ stuff }) => (
     </div>
   </div>
 );
+
+export default Stuff;

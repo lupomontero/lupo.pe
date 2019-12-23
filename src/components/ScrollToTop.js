@@ -1,40 +1,18 @@
 //
-// HOC que envuelve rutas para asegurar que se haga "scroll to top" cuando
-// navegamos a una nueva ruta.
-//
-// Este componente se usa una sola vez en App.js
-//
 // Ver: https://reacttraining.com/react-router/web/guides/scroll-restoration
 //
 
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 
-import React from 'react';
-import PropTypes from 'prop-types';
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
-class ScrollToTop extends React.Component {
-  componentDidUpdate(prevProps) {
-    if (this.props.location !== prevProps.location) {
-      window.scrollTo(0, 0);
-    }
-  }
-
-  render() {
-    return this.props.children;
-  }
-}
-
-
-ScrollToTop.propTypes = {
-  location: PropTypes.shape({
-    hash: PropTypes.string,
-    key: PropTypes.string,
-    pathname: PropTypes.string,
-    search: PropTypes.string,
-    // state: undefined,
-  }).isRequired,
-  children: PropTypes.shape({}).isRequired,
+  return null;
 };
-
 
 export default ScrollToTop;

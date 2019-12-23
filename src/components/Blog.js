@@ -20,7 +20,7 @@ const PostSummary = ({ post }) => (
   </article>
 );
 
-export default ({ posts }) => (
+const Blog = ({ posts }) => (
   <section className="Blog">
     <h2>Blog Archive</h2>
     {posts.map(post => (
@@ -28,3 +28,5 @@ export default ({ posts }) => (
     ))}
   </section>
 );
+
+export default Blog;
