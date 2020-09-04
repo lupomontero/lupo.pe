@@ -2,14 +2,14 @@
   "name": "lupo.pe",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://lupo.pe",
+  "homepage": "https://lupomontero.com",
   "dependencies": {
-    "disqus-react": "^1.0.5",
-    "marked": "^0.8.0",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
-    "react-router-dom": "^5.1.2",
-    "react-scripts": "3.3.0"
+    "disqus-react": "^1.0.10",
+    "marked": "^1.1.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "3.4.3"
   },
   "scripts": {
     "start": "react-scripts start",
