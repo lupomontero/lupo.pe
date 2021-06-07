@@ -93,6 +93,7 @@ pre {
   background: tomato;
   margin: 0 10px 20px;
   background-size: cover;
+  background-position: center;
 }
 
 .Stuff > div > a:hover {
