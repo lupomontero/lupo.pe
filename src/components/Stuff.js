@@ -1,5 +1,3 @@
-import React from 'react';
-
 const Stuff = ({ stuff }) => (
   <div className="Stuff">
     <h2>Stuff</h2>

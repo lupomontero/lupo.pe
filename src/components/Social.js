@@ -1,5 +1,3 @@
-import React from 'react';
-
 const Social = props => (
   <div className="Social">
     {props.social.map(item => (
@@ -10,7 +8,7 @@ const Social = props => (
           target="_blank"
           rel="noopener noreferrer"
         >
-          <div dangerouslySetInnerHTML={{__html: item.icon}} />
+          <div dangerouslySetInnerHTML={{ __html: item.icon }} />
         </a>
       </div>
     ))}

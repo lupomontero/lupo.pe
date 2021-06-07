@@ -1,4 +1,3 @@
-import React from 'react';
 import Stuff from './Stuff';
 import Blog from './Blog';
 
