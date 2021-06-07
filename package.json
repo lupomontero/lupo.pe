@@ -4,8 +4,8 @@
   "private": true,
   "homepage": "https://lupomontero.com",
   "dependencies": {
-    "disqus-react": "^1.0.10",
-    "marked": "^1.1.1",
+    "disqus-react": "^1.0.11",
+    "marked": "^2.0.7",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0",

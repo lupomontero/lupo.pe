@@ -29,42 +29,29 @@ const main = (cb) => {
         return { ...memo, body: [...memo.body, token] };
       } else if (token.type === 'hr') {
         return { ...memo, body: [] };
-      } else if (token.type === 'text') {
-        if (/^URL:\s/.test(token.text)) {
-          return {
-            ...memo,
-            meta: {
-              ...memo.meta,
-              url: token.text.slice(4).trim(),
-            },
-          };
-        } else if (/^Tags:\s/.test(token.text)) {
-          return {
-            ...memo,
-            meta: {
-              ...memo.meta,
-              tags: token.text.slice(5).trim().split(',').map(
-                item => item.replace(/`/g, '').trim()
-              ),
-            },
-          };
-        } else if (/^Author:\s/.test(token.text)) {
-          return {
-            ...memo,
-            meta: {
-              ...memo.meta,
-              author: token.text.slice(7).trim(),
-            },
-          };
-        } else if (/^Published on:\s/.test(token.text)) {
-          return {
-            ...memo,
-            meta: {
-              ...memo.meta,
-              publishedAt: token.text.slice(13).trim(),
-            },
-          };
-        }
+      } else if (token.type === 'list') {
+        return {
+          ...memo,
+          meta: token.items.reduce(
+            (prev, item) => (
+              /^URL:\s/.test(item.text)
+                ? { ...prev, url: item.text.slice(4).trim() }
+                : /^Tags:\s/.test(item.text)
+                  ? {
+                    ...prev,
+                    tags: item.text.slice(5).trim().split(',').map(
+                      item => item.replace(/`/g, '').trim()
+                    ),
+                  }
+                  : /^Author:\s/.test(item.text)
+                    ? { ...prev, author: item.text.slice(7).trim() }
+                    : /^Published on:\s/.test(item.text)
+                      ? { ...prev, publishedAt: item.text.slice(13).trim() }
+                      : prev
+            ),
+            memo.meta,
+          ),
+        };
       }
       return memo;
     }, {
