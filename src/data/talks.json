@@ -1,0 +1,330 @@
+[
+  {
+    "title": "Trigonometría bella",
+    "date": "2020-09-25",
+    "thumb": "https://files.speakerdeck.com/presentations/f7c95e6222dc4b138af75843b126040c/preview_slide_0.jpg",
+    "links": [
+      {
+        "type": "meetup",
+        "url": "https://www.meetup.com/LimaJS/events/kmwfjrybcmbwb/"
+      },
+      {
+        "type": "video",
+        "url": "https://youtu.be/NiO_o-QEfCA"
+      },
+      {
+        "type": "repo",
+        "url": "https://github.com/lupomontero/trig"
+      },
+      {
+        "type": "slides",
+        "url": "https://docs.google.com/presentation/d/e/2PACX-1vQ7Pecv6h0RZp4B1Jm2HFT2XNGN5paZ954jv0UXDMp9vH8AJDHE7U1zqPInT0yHSS5-kpat5F1UM19w/pub?start=false&loop=false&delayms=3000"
+      },
+      {
+        "type": "slides",
+        "url": "https://speakerdeck.com/lupomontero/trigonometria-bella"
+      }
+    ]
+  },
+  {
+    "title": "Analizadores sintácticos funcionales en JavaScript",
+    "date": "2020-05-29",
+    "thumb": "https://files.speakerdeck.com/presentations/2b4ea5477fd8447daf1448a30c51e309/preview_slide_0.jpg",
+    "links": [
+      {
+        "type": "meetup",
+        "url": "https://www.meetup.com/LimaJS/events/kmwfjrybchbcc/"
+      },
+      {
+        "type": "video",
+        "url": "https://youtu.be/TKCVumyQ7x4"
+      },
+      {
+        "type": "repo",
+        "url": "https://github.com/lupomontero/parsing"
+      },
+      {
+        "type": "slides",
+        "url": "https://docs.google.com/presentation/d/e/2PACX-1vRWX5yU4_9ZpsO2_kcKSR-3VoxUO8wg8l9vMia0h5nR0xLea1XdErdf-zc3Ktxe64DLtRyInJ9-HSbU/pub?start=false&loop=false&delayms=3000"
+      },
+      {
+        "type": "slides",
+        "url": "https://speakerdeck.com/lupomontero/analizadores-sintacticos-funcionales-en-javascript"
+      }
+    ]
+  },
+  {
+    "title": "Sobre clases y herencia prototipal en JavaScript",
+    "date": "2019-12-19",
+    "thumb": "https://img.youtube.com/vi/UFR1sqJtUkQ/2.jpg",
+    "links": [
+      {
+        "type": "meetup",
+        "url": "https://www.meetup.com/LimaJS/events/kmwfjryzqbzb/"
+      },
+      {
+        "type": "video",
+        "url": "https://youtu.be/UFR1sqJtUkQ"
+      },
+      {
+        "type": "repo",
+        "url": "https://github.com/lupomontero/classes-and-protos"
+      }
+    ]
+  },
+  {
+    "title": "Manejo de memoria en Rust: Ownership",
+    "date": "2019-11-28",
+    "thumb": "https://files.speakerdeck.com/presentations/334a7b738d4c477289fd231730e57463/preview_slide_0.jpg",
+    "links": [
+      {
+        "type": "meetup",
+        "url": "https://www.meetup.com/MozillaPeru/events/jdsqkryzpblc/"
+      },
+      {
+        "type": "slides",
+        "url": "https://docs.google.com/presentation/d/e/2PACX-1vRv6Lx2YvWfo_gVFy3uIAYisz-PgCIThii7BjN4xZVhENgcX2_fLp-nTB8gR6lxbMiG7stnHwsoOKyr/pub?start=false&loop=false&delayms=3000"
+      },
+      {
+        "type": "slides",
+        "url": "https://speakerdeck.com/lupomontero/manejo-de-memoria-en-rust-ownership"
+      }
+    ]
+  },
+  {
+    "title": "Aprendienddo Rust con Rustlings",
+    "date": "2019-09-26",
+    "links": [
+      {
+        "type": "meetup",
+        "url": "https://www.meetup.com/MozillaPeru/events/wxgsbryzmbjc/"
+      }
+    ]
+  },
+  {
+    "title": "Hola Rust! Aprendiendo con rustlings",
+    "date": "2019-06-27",
+    "thumb": "https://files.speakerdeck.com/presentations/650682b38d384cf49307e9b5232e39f7/preview_slide_0.jpg",
+    "links": [
+      {
+        "type": "meetup",
+        "url": "https://www.meetup.com/MozillaPeru/events/wxgsbryzjbkc/"
+      },
+      {
+        "type": "slides",
+        "url": "https://speakerdeck.com/lupomontero/hola-rust-aprendiendo-con-rustlings"
+      }
+    ]
+  },
+  {
+    "title": "WebThing: construyamos una lámpara",
+    "date": "2019-05-23",
+    "thumb": "https://files.speakerdeck.com/presentations/49a36f017cde489da0c8bab5319b0d18/preview_slide_0.jpg",
+    "links": [
+      {
+        "type": "meetup",
+        "url": "https://www.meetup.com/MozillaPeru/events/zbmvwqyzhbfc/"
+      },
+      {
+        "type": "slides",
+        "url": "https://docs.google.com/presentation/d/e/2PACX-1vRETbXb-1doqw3Ds8D1y-0d9f0H6NwiKlK67qjkgkS96lPP7QenAkaX_kcNG7-COB1-r4YcQQnihvKp/pub?start=false&loop=false&delayms=3000"
+      },
+      {
+        "type": "slides",
+        "url": "https://speakerdeck.com/lupomontero/webthing-construyamos-una-lampara"
+      }
+    ]
+  },
+  {
+    "title": "Webthing",
+    "date": "2019-05-11",
+    "links": [
+      {
+        "type": "meetup",
+        "url": "https://www.meetup.com/LimaJS/events/fqzsdqyzhbvb/"
+      }
+    ]
+  },
+  {
+    "title": "Combinando y grabando ⏺ video 🎥 y audio 🎙 en el navegador",
+    "date": "2019-02-28",
+    "thumb": "https://files.speakerdeck.com/presentations/558d35ef1aac4d698316ffb60c25f886/preview_slide_0.jpg",
+    "links": [
+      {
+        "type": "meetup",
+        "url": "https://www.meetup.com/MozillaPeru/events/258623342/"
+      },
+      {
+        "type": "slides",
+        "url": "https://docs.google.com/presentation/d/e/2PACX-1vRhLYz-mQfC_p-3m-D-8SbtT-u_kM8DU1m0Z2FkQ1qXMsnX2TqLttCo17-jJCrDP73UDpkZzl0us_bD/pub?start=false&loop=false&delayms=3000"
+      },
+      {
+        "type": "slides",
+        "url": "https://speakerdeck.com/lupomontero/combinando-y-grabando-video-y-audio-en-el-navegador"
+      }
+    ]
+  },
+  {
+    "title": "Reduzco, reuso y reciclo",
+    "date": "2019-02-21",
+    "thumb": "https://files.speakerdeck.com/presentations/53a49813729647f8ae2cd674be1847bd/preview_slide_0.jpg",
+    "links": [
+      {
+        "type": "meetup",
+        "url": "https://www.meetup.com/LimaJS/events/fqzsdqyzdbcc/"
+      },
+      {
+        "type": "slides",
+        "url": "https://docs.google.com/presentation/d/e/2PACX-1vT5RkPmsnGUZ1A8KgwklCnQ3Vck21Ux6V2SNXPQWZLlLYO1a13TOL39c0o5P-JI7FUDZT-NjgKYfFde/pub?start=false&loop=false&delayms=3000"
+      },
+      {
+        "type": "slides",
+        "url": "https://speakerdeck.com/lupomontero/reduzco-reuso-y-reciclo"
+      }
+    ]
+  },
+  {
+    "title": "Web Assembly, Rust y el futuro de JavaScript",
+    "date": "2018-12-15",
+    "thumb": "https://files.speakerdeck.com/presentations/ea5441f5bfbd4889a6bfef801debc2f0/preview_slide_0.jpg",
+    "links": [
+      {
+        "type": "meetup",
+        "url": "https://www.meetup.com/LimaJS/events/fqzsdqyxqbbc/"
+      },
+      {
+        "type": "slides",
+        "url": "https://docs.google.com/presentation/d/e/2PACX-1vRZs_IE_GTfKHRNugm4uP6P4arQWsYF_JDkfsgugz87KCy0mXmGRvWFotazIapl1L6XddNg8glyTeOS/pub?start=false&loop=false&delayms=3000"
+      },
+      {
+        "type": "slides",
+        "url": "https://speakerdeck.com/lupomontero/web-assembly-rust-y-el-futuro-de-javascript"
+      }
+    ]
+  },
+  {
+    "title": "Primeros pasos con WebAssembly y Rust",
+    "date": "2018-10-17",
+    "thumb": "https://files.speakerdeck.com/presentations/6277e618ee2e4ed7ab5fa231cf6cc895/preview_slide_0.jpg",
+    "links": [
+      {
+        "type": "meetup",
+        "url": "https://www.meetup.com/MozillaPeru/events/255089605/"
+      },
+      {
+        "type": "slides",
+        "url": "https://speakerdeck.com/lupomontero/primeros-pasos-con-rust-y-webassembly"
+      }
+    ]
+  },
+  {
+    "title": "Paralelizando promesas: concurrencia, throttling y manejo de errores",
+    "date": "2018-09-13",
+    "thumb": "https://files.speakerdeck.com/presentations/41df8a1808c044b481685fdc85fc1cd0/preview_slide_0.jpg",
+    "links": [
+      {
+        "type": "meetup",
+        "url": "https://www.meetup.com/NodersJS/events/snrpwpyxmbrb/"
+      },
+      {
+        "type": "slides",
+        "url": "https://speakerdeck.com/lupomontero/paralelizando-promesas"
+      }
+    ]
+  },
+  {
+    "title": "Redux 'a lo pobre'",
+    "date": "2018-08-23",
+    "thumb": "https://files.speakerdeck.com/presentations/23009c4231614df0b00e9d2000bdcd3a/preview_slide_0.jpg",
+    "links": [
+      {
+        "type": "meetup",
+        "url": "https://www.eventbrite.com/e/limajs-agosto-tickets-49071586436"
+      },
+      {
+        "type": "slides",
+        "url": "https://docs.google.com/presentation/d/e/2PACX-1vS8VyYNQsXABuUOX4A7HxyeD-Wp9OAO6X6WdzkTs07uJJG_BI0W5UWfRRdGuVnzyS4sHkn8CfrTG-_X/pub?start=false&loop=false&delayms=3000"
+      },
+      {
+        "type": "slides",
+        "url": "https://speakerdeck.com/lupomontero/redux-a-lo-pobre"
+      }
+    ]
+  },
+  {
+    "title": "Paralelizando promesas",
+    "date": "2018-06-20",
+    "thumb": "https://files.speakerdeck.com/presentations/1d843d192fd24ace8d20c53680632a6d/preview_slide_0.jpg",
+    "links": [
+      {
+        "type": "meetup",
+        "url": "https://www.eventbrite.com/e/limajs-junio-tickets-47201573176"
+      },
+      {
+        "type": "slides",
+        "url": "https://docs.google.com/presentation/d/e/2PACX-1vRrU2SPvkzmedONWtyY1B2r18eh2DhsLL4bPR1YyGgpn0-M-6-clgcuJ7tnKfD7Fz_kuOa-WpHEw_qN/pub?start=false&loop=false&delayms=3000"
+      },
+      {
+        "type": "slides",
+        "url": "https://speakerdeck.com/lupomontero/paralelizando-promesas-36879a31-436a-48a2-810c-3dbe7ecec37d"
+      }
+    ]
+  },
+  {
+    "title": "JavaScript Funcional",
+    "date": "2018-03-21",
+    "thumb": "https://files.speakerdeck.com/presentations/c2f9e0cbb1e24005941f206c1aa28bc4/preview_slide_0.jpg",
+    "links": [
+      {
+        "type": "meetup",
+        "url": "https://www.eventbrite.com/e/limajs-marzo-tickets-44271551402"
+      },
+      {
+        "type": "slides",
+        "url": "https://speakerdeck.com/lupomontero/javascript-funcional"
+      }
+    ]
+  },
+  {
+    "title": "Composition vs Inheritance",
+    "date": "2017-04-21",
+    "thumb": "https://files.speakerdeck.com/presentations/5b9621c373064ffa9872cef9e3a010c8/preview_slide_0.jpg",
+    "links": [
+      {
+        "type": "meetup",
+        "url": "https://www.eventbrite.com/e/limajs-abril-tickets-33552679969"
+      },
+      {
+        "type": "slides",
+        "url": "https://speakerdeck.com/lupomontero/composition-vs-inheritance"
+      }
+    ]
+  },
+  {
+    "title": "Hoodie - Very Fast Web App Development",
+    "date": "2013-12-11",
+    "thumb": "https://files.speakerdeck.com/presentations/526a9ce0451301315c5022240f99dad3/preview_slide_0.jpg",
+    "links": [
+      {
+        "type": "meetup",
+        "url": "http://lanyrd.com/2013/limajs-december/"
+      },
+      {
+        "type": "slides",
+        "url": "https://speakerdeck.com/lupomontero/introduccion-a-hoodie"
+      }
+    ]
+  },
+  {
+    "title": "JavaScript Streams",
+    "date": "2012-12-10",
+    "thumb": "https://files.speakerdeck.com/presentations/d64c82a025480130f1671231381f54b3/preview_slide_0.jpg",
+    "": "JS Perú",
+    "links": [
+      {
+        "type": "slides",
+        "url": "https://speakerdeck.com/lupomontero/javascript-streams"
+      }
+    ]
+  }
+]

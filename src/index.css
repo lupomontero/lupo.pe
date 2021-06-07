@@ -40,7 +40,7 @@ pre {
 .App {
   padding: 30px;
   text-align: center;
-  max-width: 900px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -74,7 +74,8 @@ pre {
   fill: lime;
 }
 
-.Stuff > div {
+.Stuff > div,
+.Talks > div {
   display: flex;
   width: 100%;
   justify-content: center;
@@ -83,20 +84,23 @@ pre {
   margin-bottom: 40px;
 }
 
-.Stuff > div > a {
+.Stuff > div > a,
+.Talks > div > a {
   display: flex;
   justify-content: center;
   align-items: center;
   color: transparent;
   width: 200px;
-  height: 150px;
+  height: 110px;
   background: tomato;
   margin: 0 10px 20px;
   background-size: cover;
   background-position: center;
+  padding: 5px;
 }
 
-.Stuff > div > a:hover {
+.Stuff > div > a:hover,
+.Talks > div > a:hover {
   color: #ccc;
   background-image: none !important;
 }

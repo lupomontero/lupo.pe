@@ -4,14 +4,14 @@ import Header from './components/Header';
 import Home from './components/Home';
 import Post from './components/Post';
 
-const App = ({ posts, social, stuff }) => (
+const App = ({ posts, social, stuff, talks }) => (
   <div className="App">
     <Router>
       <ScrollToTop />
       <Header social={social} />
       <Switch>
         <Route exact path="/">
-          <Home stuff={stuff} posts={posts} />
+          <Home stuff={stuff} posts={posts} talks={talks} />
         </Route>
         <Route path="/:id">
           <Post posts={posts} />
