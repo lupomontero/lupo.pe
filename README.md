@@ -2,6 +2,8 @@
 
 ## Talks
 
+* 2020-09-25: Trigonometría bella - [LimaJS](https://www.meetup.com/LimaJS/events/kmwfjrybcmbwb/)
+* 2020-05-29: Analizadores sintácticos funcionales en JavaScript - [LimaJS](https://www.meetup.com/LimaJS/events/kmwfjrybchbcc/)
 * 2019-12-19: Sobre clases y herencia prototipal en JavaScript - [LimaJS](https://www.meetup.com/LimaJS/events/kmwfjryzqbzb/)
 * 2019-11-28: Manejo de memoria en Rust: Ownership - [MozillaPeru](https://www.meetup.com/MozillaPeru/events/jdsqkryzpblc/)
 * 2019-09-26: Aprendienddo Rust con Rustlings - [MozillaPeru](https://www.meetup.com/MozillaPeru/events/wxgsbryzmbjc/)
