@@ -1,5 +1,7 @@
 # lupo.pe
 
+[![Node CI](https://github.com/lupomontero/lupo.pe/actions/workflows/nodejs.yml/badge.svg)](https://github.com/lupomontero/lupo.pe/actions/workflows/nodejs.yml)
+
 ## Talks
 
 * 2020-09-25: Trigonometría bella - [LimaJS](https://www.meetup.com/LimaJS/events/kmwfjrybcmbwb/)
