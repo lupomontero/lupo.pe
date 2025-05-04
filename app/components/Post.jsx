@@ -1,13 +1,11 @@
-import { useParams } from 'react-router';
-import { DiscussionEmbed } from 'disqus-react';
+// import { DiscussionEmbed } from 'disqus-react';
+import { DiscussionEmbed } from '../lib/disqus';
 
-const Post = ({ posts }) => {
-  const { id } = useParams();
-  const post = posts.find(p => p.id === id);
+const Post = ({ post }) => {
   return (
     <div className="Post">
       <h1>{post.title}</h1>
-      <p>{post.publishedAt}</p>
+      <p>{post.publishedAt.toISOString().slice(0, 10)}</p>
       <div dangerouslySetInnerHTML={{ __html: post.body }} />
       <DiscussionEmbed shortname={'lupomontero'} config={{
         url: post.url,

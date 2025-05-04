@@ -4,7 +4,7 @@ const Social = () => {
   const [profiles, setProfiles] = useState();
 
   useEffect(() => {
-    fetch('./data/social.json')
+    fetch('/data/social.json')
       .then(resp => resp.json())
       .then(setProfiles)
       .catch(setProfiles);

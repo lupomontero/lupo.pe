@@ -1,18 +1,19 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router';
-import { CommentCount } from 'disqus-react';
-import { fetchJSON } from '../util';
+// import { CommentCount } from 'disqus-react';
+import { CommentCount } from '../lib/disqus';
+import { fetchJSON } from '../lib/util';
 
 const PostSummary = ({ post }) => (
   <article>
     <h3>
-      <Link to={post.id}>
+      <Link to={`/blog/${post.id}`}>
         {post.title}
       </Link>
     </h3>
     <span>{post.publishedAt.toISOString().slice(0, 10)} | </span>
     <CommentCount shortname={'lupomontero'} config={{
-      url: post.url,
+      url: post.url, // legay prop must be replaced with dynamic one??
       identifier: post.id,
       title: post.title,
     }}>
@@ -25,7 +26,7 @@ const Blog = () => {
   const [posts, setPosts] = useState();
 
   useEffect(() => {
-    fetchJSON('./data/posts.json')
+    fetchJSON('/data/posts.json')
       .then(setPosts)
       .catch(setPosts);
   }, []);

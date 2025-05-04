@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { fetchJSON } from '../util';
+import { fetchJSON } from '../lib/util';
 import Blog from '../components/Blog';
 import Stuff from '../components/Stuff';
 import Talks from '../components/Talks';
@@ -9,8 +9,8 @@ const IndexRoute = () => {
 
   useEffect(() => {
     Promise.all([
-      fetchJSON('./data/stuff.json'),
-      fetchJSON('./data/talks.json'),
+      fetchJSON('/data/stuff.json'),
+      fetchJSON('/data/talks.json'),
     ])
       .then(([stuff, talks]) => {
         setData({ stuff, talks });
