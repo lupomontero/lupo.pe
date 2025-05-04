@@ -1,11 +1,14 @@
+---
+url: https://lupomontero.com/running-node-0-8-x-on-openshift/
+tags:
+  - javascript
+  - node
+  - openshift
+author: lupo
+publishedAt: 2012-09-28
+---
+
 # Running nodejs 0.8.x (or any other version) on OpenShift
-
-* URL: https://lupomontero.com/running-node-0-8-x-on-openshift/
-* Tags: `javascript`, `node`, `openshift`
-* Author: lupo
-* Published on: 2012-09-28
-
-***
 
 This week I had a quick look at Red Hat’s [OpenShift](https://openshift.redhat.com/)
 platform. After a very good first impression I decided to create a sort of

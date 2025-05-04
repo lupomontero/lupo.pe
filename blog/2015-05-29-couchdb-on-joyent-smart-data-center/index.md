@@ -1,11 +1,14 @@
+---
+url: https://lupomontero.com/couchdb-on-joyent-smart-data-center/
+tags:
+  - couchdb
+  - javascript
+  - smartos
+author: lupo
+publishedAt: 2015-05-29
+---
+
 # CouchDB on Joyent Smart Data Center
-
-* URL: https://lupomontero.com/couchdb-on-joyent-smart-data-center/
-* Tags: `couchdb`, `javascript`, `smartos`
-* Author: lupo
-* Published on: 2015-05-29
-
-***
 
 Over the last few weeks I have been exploring [Joyent’s Smart Data Center](https://www.joyent.com/)
 as an alternative to [AWS](http://aws.amazon.com/). I mainly run [node.js](https://nodejs.org/)

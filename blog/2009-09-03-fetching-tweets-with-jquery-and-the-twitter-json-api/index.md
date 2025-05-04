@@ -1,11 +1,15 @@
+---
+url: https://lupomontero.com/fetching-tweets-with-jquery-and-the-twitter-json-api/
+tags:
+  - ajax
+  - javascript
+  - jquery
+  - twitter
+author: lupo
+publishedAt: 2009-09-03
+---
+
 # Fetching tweets with jQuery and the Twitter JSON API
-
-* URL: https://lupomontero.com/fetching-tweets-with-jquery-and-the-twitter-json-api/
-* Tags: `ajax`, `javascript`, `jquery`, `twitter`
-* Author: lupo
-* Published on: 2009-09-03
-
-***
 
 Just thought it’d be nice to share this little script that fetches tweets using
 a jQuery AJAX request and the Twitter API. The script is based on a snippet I

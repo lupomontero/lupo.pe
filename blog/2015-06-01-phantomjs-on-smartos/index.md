@@ -1,11 +1,14 @@
+---
+url: https://lupomontero.com/phantomjs-on-smartos/
+tags:
+  - phantomjs
+  - javascript
+  - smartos
+author: lupo
+publishedAt: 2015-06-01
+---
+
 # PhantomJS on SmartOS
-
-* URL: https://lupomontero.com/phantomjs-on-smartos/
-* Tags: `phantomjs`, `javascript`, `smartos`
-* Author: lupo
-* Published on: 2015-06-01
-
-***
 
 So I’ve been playing around with [Joyent’s Smart Data Center](https://www.joyent.com/)
 for a few days and so far it’s been a very positive experience. Today I was

@@ -1,11 +1,13 @@
+---
+url: https://lupomontero.com/php-5-2-10-and-pear-notice-undefined-variable-dorest-in-pearcommandinstall-php-on-line-1220/
+tags:
+  - pear
+  - php
+author: lupo
+publishedAt: 2009-12-08
+---
+
 # PHP 5.2.10 and PEAR – Notice: Undefined variable: dorest in PEAR/Command/Install.php on line 1220
-
-* URL: https://lupomontero.com/php-5-2-10-and-pear-notice-undefined-variable-dorest-in-pearcommandinstall-php-on-line-1220/
-* Tags: `pear`, `php`
-* Author: lupo
-* Published on: 2009-12-08
-
-***
 
 Today, after upgrading packages with apt-get on a server running Debian Lenny my
 PEAR installation seemed to be broken. PHP had been updated to 5.2.10 and PEAR

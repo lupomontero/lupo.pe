@@ -1,11 +1,13 @@
+---
+url: https://lupomontero.com/parsing-domain-names-in-node-js-and-the-browser/
+tags:
+  - javascript
+  - node
+author: lupo
+publishedAt: 2014-11-11
+---
+
 # Parsing domain names in node.js and the browser
-
-* URL: https://lupomontero.com/parsing-domain-names-in-node-js-and-the-browser/
-* Tags: `javascript`, `node`
-* Author: lupo
-* Published on: 2014-11-11
-
-***
 
 Parsing domain names in a useful way is a bitch. Top level domains have lots of
 exceptions and weird rules that are imposible to reflect in a sensible regular

@@ -1,11 +1,14 @@
+---
+url: https://lupomontero.com/writing-node-js-modules-in-cpp/
+tags:
+  - c++
+  - javascript
+  - node
+author: lupo
+publishedAt: 2011-03-13
+---
+
 # Writing Node.js modules in C++
-
-* URL: https://lupomontero.com/writing-node-js-modules-in-cpp/
-* Tags: `c++`, `javascript`, `node`
-* Author: lupo
-* Published on: 2011-03-13
-
-***
 
 Today I found myself looking at how to write [Node.js](https://nodejs.org)
 modules in C++. I read [@izs’s article on the How to Node website](https://howtonode.org/how-to-module)

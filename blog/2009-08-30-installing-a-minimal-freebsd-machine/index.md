@@ -1,11 +1,13 @@
+---
+url: https://lupomontero.com/installing-a-minimal-freebsd-machine/
+tags:
+  - freebsd
+  - unix
+author: lupo
+publishedAt: 2009-08-30
+---
+
 # Installing a minimal FreeBSD machine
-
-* URL: https://lupomontero.com/installing-a-minimal-freebsd-machine/
-* Tags: `freebsd`, `unix`
-* Author: lupo
-* Published on: 2009-08-30
-
-***
 
 This tutorial outlines how to install a FreeBSD minimal setup using version 7.2.
 

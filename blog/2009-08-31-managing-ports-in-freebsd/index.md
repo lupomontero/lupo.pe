@@ -1,11 +1,13 @@
+---
+url: https://lupomontero.com/managing-ports-in-freebsd/
+tags:
+  - freebsd
+  - unix
+author: lupo
+publishedAt: 2009-08-31
+---
+
 # Managing ports in FreeBSD
-
-* URL: https://lupomontero.com/managing-ports-in-freebsd/
-* Tags: `freebsd`, `unix`
-* Author: lupo
-* Published on: 2009-08-31
-
-***
 
 ![FreeBSD logo](https://user-images.githubusercontent.com/110297/38502017-f4b9aa76-3bd3-11e8-8bf2-3f156b30324f.png)
 

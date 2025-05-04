@@ -1,11 +1,14 @@
+---
+url: https://lupomontero.com/building-a-towncountry-picker-using-googles-geocoding-api-and-jquery/
+tags:
+  - geocoding
+  - javascript
+  - jquery
+author: lupo
+publishedAt: 2011-08-03
+---
+
 # Building a town/country picker using Google’s Geocoding API and jQuery
-
-* URL: https://lupomontero.com/building-a-towncountry-picker-using-googles-geocoding-api-and-jquery/
-* Tags: `geocoding`, `javascript`, `jquery`
-* Author: lupo
-* Published on: 2011-08-03
-
-***
 
 I’m currently working on a new “social” site for a startup and when building
 some of the forms, one of the bits of information we need to collect from users

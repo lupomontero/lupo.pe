@@ -1,11 +1,12 @@
+---
+url: https://lupomontero.com/using-javascript-closures-to-create-private-scopes/
+tags:
+  - javascript
+author: lupo
+publishedAt: 2011-03-06
+---
+
 # Using JavaScript closures to create private scopes
-
-* URL: https://lupomontero.com/using-javascript-closures-to-create-private-scopes/
-* Tags: `javascript`
-* Author: lupo
-* Published on: 2011-03-06
-
-***
 
 One of the best known problems in JavaScript is it’s dependance on a global
 scope, which basically means that any variables you declare outside of a

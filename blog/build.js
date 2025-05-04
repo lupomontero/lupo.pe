@@ -1,96 +1,111 @@
 #! /usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
-const marked = require('marked');
+import { readdir, readFile, stat, writeFile, mkdir } from 'node:fs/promises';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+import { unified } from 'unified';
+import remarkParse from 'remark-parse';
+import remarkRehype from 'remark-rehype';
+import rehypeStringify from 'rehype-stringify';
+import yaml from 'js-yaml';
 
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
-const isDir = fname => fs.statSync(path.join(__dirname, fname)).isDirectory();
+const parser = unified()
+  .use(remarkParse)
+  .use(remarkRehype)
+  .use(rehypeStringify);
 
+const splitMetaAndContent = (text) => {
+  const lines = text.split('\n');
 
-const main = (cb) => {
-  const dirs = fs.readdirSync(__dirname).filter(isDir);
-  const posts = dirs.map((dir) => {
-    const indexPath = path.join(__dirname, dir, 'index.md');
+  if (lines[0] !== '---') {
+    return [null, text];
+  }
 
-    if (!fs.statSync(indexPath)) {
-      return;
-    }
+  const metaEndIdx = lines.slice(1).findIndex(line => line === '---');
 
-    const contents = fs.readFileSync(indexPath, 'utf8');
-    const tokens = marked.lexer(contents);
+  if (metaEndIdx < 0) {
+    throw new Error('Meta section must be closed with a "---"');
+  }
 
-    if (tokens[0].type !== 'heading' && tokens[0].depth === 1) {
-      throw new Error('Post must start with H1');
-    }
-
-    const { meta, body } = tokens.slice(1).reduce((memo, token) => {
-      if (memo.body) {
-        return { ...memo, body: [...memo.body, token] };
-      } else if (token.type === 'hr') {
-        return { ...memo, body: [] };
-      } else if (token.type === 'list') {
-        return {
-          ...memo,
-          meta: token.items.reduce(
-            (prev, item) => (
-              /^URL:\s/.test(item.text)
-                ? { ...prev, url: item.text.slice(4).trim() }
-                : /^Tags:\s/.test(item.text)
-                  ? {
-                    ...prev,
-                    tags: item.text.slice(5).trim().split(',').map(
-                      item => item.replace(/`/g, '').trim()
-                    ),
-                  }
-                  : /^Author:\s/.test(item.text)
-                    ? { ...prev, author: item.text.slice(7).trim() }
-                    : /^Published on:\s/.test(item.text)
-                      ? { ...prev, publishedAt: item.text.slice(13).trim() }
-                      : prev
-            ),
-            memo.meta,
-          ),
-        };
-      }
-      return memo;
-    }, {
-      meta: {
-        id: dir,
-        title: tokens[0].text,
-        url: '',
-        tags: [],
-        author: '',
-        publishedAt: null,
-      },
-      body: false,
-    });
-
-    body.links = tokens.links;
-    const html = marked.parser(body);
-
-    return { ...meta, body: html };
-  }).sort((a, b) => {
-    if (a.publishedAt < b.publishedAt) {
-      return 1;
-    } else if (a.publishedAt > b.publishedAt) {
-      return -1;
-    } else {
-      return 0;
-    }
-  });
-
-  fs.writeFileSync(
-    path.join(__dirname, '../src/data/posts.json'),
-    JSON.stringify(posts, null, 2),
-  );
+  return [
+    lines.slice(1, metaEndIdx + 1).join('\n').trim(),
+    lines.slice(metaEndIdx + 2).join('\n').trim(),
+  ];
 };
 
+const main = async () => {
+  const sourceDir = path.join(__dirname);
+  const destinationDir = path.join(__dirname, '../public/data');
+  const files = await readdir(sourceDir);
+  const dirs = await Promise.all(files.map(file => stat(path.join(sourceDir, file))))
+    .then(stats => stats.reduce(
+      (memo, stat, idx) => {
+        if (!stat.isDirectory()) {
+          return memo;
+        }
+        return memo.concat(files[idx]);
+      },
+      [],
+    ));
 
-main((err) => {
-  if (err) {
-    console.error(err);
-    process.exit(1);
-  }
-  process.exit(0);
+  const posts = await Promise.all(dirs.map(async (dir) => {
+    const fname = path.join(sourceDir, dir, 'index.md');
+    const text = await readFile(fname, 'utf8');
+    const trimmed = (text || '').trim();
+
+    if (!trimmed) {
+      throw new Error(`${fname} is empty`);
+    }
+
+    const [metaText, contentText] = splitMetaAndContent(trimmed);
+    const rootNode = parser.parse(contentText);
+    const meta = !metaText ? null : yaml.load(metaText);
+    const [firstChild] = rootNode.children;
+
+    if (firstChild.type !== 'heading' || firstChild.depth !== 1) {
+      throw new Error(`${fname} is missing title (heading 1 at start)`);
+    }
+
+    return {
+      id: dir.slice(11),
+      title: firstChild.children[0].value,
+      ...meta,
+      body: parser.stringify(await parser.run({
+        type: 'root',
+        children: rootNode.children.slice(1),
+      })),
+    };
+  }));
+
+  const sorted = posts.sort((a, b) => {
+    if (a.publishedAt < b.publishedAt) {
+      return 1;
+    }
+    if (a.publishedAt > b.publishedAt) {
+      return -1;
+    }
+    return 0;
+  });
+
+
+  // Write posts index (collection)
+  await writeFile(
+    path.join(destinationDir, 'posts.json'),
+    JSON.stringify(sorted.map(({ body, ...rest }) => rest), null, 2),
+  );
+
+  // Write individual posts
+  await mkdir(path.join(destinationDir, 'posts'), { recursive: true });
+
+  await Promise.all(sorted.map(async (post) => {
+    const postFname = path.join(destinationDir, `posts/${post.id}.json`);
+    await writeFile(postFname, JSON.stringify(post, null, 2));
+  }));
+};
+
+main().catch((err) => {
+  console.error(err);
+  process.exit(1);
 });

@@ -1,11 +1,14 @@
+---
+url: https://lupomontero.com/installing-phps-oauth-pecl-extension-on-mac-os-x-snow-leopard/
+tags:
+  - osx
+  - pecl
+  - php
+author: lupo
+publishedAt: 2011-03-27
+---
+
 # Installing PHP’s OAuth PECL extension on Mac OS X Snow Leopard
-
-* URL: https://lupomontero.com/installing-phps-oauth-pecl-extension-on-mac-os-x-snow-leopard/
-* Tags: `osx`, `pecl`, `php`
-* Author: lupo
-* Published on: 2011-03-27
-
-***
 
 I recently reinstalled the operating system on my Macbook and this time around I
 decided to use [homebrew](https://github.com/mxcl/homebrew) to manage packages.

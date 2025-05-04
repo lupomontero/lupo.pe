@@ -1,11 +1,16 @@
+---
+url: https://lupomontero.com/setting-up-a-web-server-with-apache-2-2-x-and-php-5-2-x-with-extensions-pear-mysql-5-x-and-pdo_mysql-on-freebsd-7-step-by-step-tutorial/
+tags:
+  - apache
+  - freebsd
+  - mysql
+  - pear
+  - php
+author: lupo
+publishedAt: 2009-09-13
+---
+
 # Setting up a web server with Apache 2.2.x and PHP 5.2.x with extensions, PEAR, MySQL 5.x and pdo_mysql on FreeBSD 7 step by step tutorial
-
-* URL: https://lupomontero.com/setting-up-a-web-server-with-apache-2-2-x-and-php-5-2-x-with-extensions-pear-mysql-5-x-and-pdo_mysql-on-freebsd-7-step-by-step-tutorial/
-* Tags: `apache`, `freebsd`, `mysql`, `pear`, `php`
-* Author: lupo
-* Published on: 2009-09-13
-
-***
 
 This quick tutorial will show you how to set up a FreeBSD machine (based on
 minimal install) to run as a web server using Apache 2.2.x, PHP 5 and MySQL 5.
