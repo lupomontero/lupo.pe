@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "build",
+    "public": "build/client",
     "ignore": [
       "firebase.json",
       "**/.*",
@@ -12,10 +12,76 @@
         "destination": "/index.html"
       }
     ],
-    "headers": [
+    "redirects": [
       {
-        "source": "/service-worker.js",
-        "headers": [{"key": "Cache-Control", "value": "no-cache"}]
+        "source": "/phantomjs-on-smartos",
+        "destination": "/blog/phantomjs-on-smartos",
+        "type": 301
+      },
+      {
+        "source": "/couchdb-on-joyent-smart-data-center",
+        "destination": "/blog/couchdb-on-joyent-smart-data-center",
+        "type": 301
+      },
+      {
+        "source": "/parsing-domain-names-in-node-js-and-the-browser",
+        "destination": "/blog/parsing-domain-names-in-node-js-and-the-browser",
+        "type": 301
+      },
+      {
+        "source": "/running-node-0-8-x-on-openshift",
+        "destination": "/blog/running-node-0-8-x-on-openshift",
+        "type": 301
+      },
+      {
+        "source": "/jquery-plugin-to-fetch-tweets-using-the-twitter-json-api",
+        "destination": "/blog/jquery-plugin-to-fetch-tweets-using-the-twitter-json-api",
+        "type": 301
+      },
+      {
+        "source": "/building-a-towncountry-picker-using-googles-geocoding-api-and-jquery",
+        "destination": "/blog/building-a-towncountry-picker-using-googles-geocoding-api-and-jquery",
+        "type": 301
+      },
+      {
+        "source": "/installing-phps-oauth-pecl-extension-on-mac-os-x-snow-leopard",
+        "destination": "/blog/installing-phps-oauth-pecl-extension-on-mac-os-x-snow-leopard",
+        "type": 301
+      },
+      {
+        "source": "/writing-node-js-modules-in-cpp",
+        "destination": "/blog/writing-node-js-modules-in-cpp",
+        "type": 301
+      },
+      {
+        "source": "/using-javascript-closures-to-create-private-scopes",
+        "destination": "/blog/using-javascript-closures-to-create-private-scopes",
+        "type": 301
+      },
+      {
+        "source": "/php-5-2-10-and-pear-notice-undefined-variable-dorest-in-pearcommandinstall-php-on-line-1220",
+        "destination": "/blog/php-5-2-10-and-pear-notice-undefined-variable-dorest-in-pearcommandinstall-php-on-line-1220",
+        "type": 301
+      },
+      {
+        "source": "/setting-up-a-web-server-with-apache-2-2-x-and-php-5-2-x-with-extensions-pear-mysql-5-x-and-pdo_mysql-on-freebsd-7-step-by-step-tutorial",
+        "destination": "/blog/setting-up-a-web-server-with-apache-2-2-x-and-php-5-2-x-with-extensions-pear-mysql-5-x-and-pdo_mysql-on-freebsd-7-step-by-step-tutorial",
+        "type": 301
+      },
+      {
+        "source": "/fetching-tweets-with-jquery-and-the-twitter-json-api",
+        "destination": "/blog/fetching-tweets-with-jquery-and-the-twitter-json-api",
+        "type": 301
+      },
+      {
+        "source": "/managing-ports-in-freebsd",
+        "destination": "/blog/managing-ports-in-freebsd",
+        "type": 301
+      },
+      {
+        "source": "/installing-a-minimal-freebsd-machine",
+        "destination": "/blog/installing-a-minimal-freebsd-machine",
+        "type": 301
       }
     ]
   }
