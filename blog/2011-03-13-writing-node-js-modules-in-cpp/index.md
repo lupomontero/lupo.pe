@@ -1,5 +1,4 @@
 ---
-url: https://lupomontero.com/writing-node-js-modules-in-cpp/
 tags:
   - c++
   - javascript

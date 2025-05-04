@@ -1,5 +1,4 @@
 ---
-url: https://lupomontero.com/setting-up-a-web-server-with-apache-2-2-x-and-php-5-2-x-with-extensions-pear-mysql-5-x-and-pdo_mysql-on-freebsd-7-step-by-step-tutorial/
 tags:
   - apache
   - freebsd

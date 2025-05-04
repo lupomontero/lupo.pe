@@ -1,5 +1,4 @@
 ---
-url: https://lupomontero.com/installing-a-minimal-freebsd-machine/
 tags:
   - freebsd
   - unix

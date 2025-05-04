@@ -1,5 +1,4 @@
 ---
-url: https://lupomontero.com/php-5-2-10-and-pear-notice-undefined-variable-dorest-in-pearcommandinstall-php-on-line-1220/
 tags:
   - pear
   - php

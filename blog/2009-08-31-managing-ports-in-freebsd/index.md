@@ -1,5 +1,4 @@
 ---
-url: https://lupomontero.com/managing-ports-in-freebsd/
 tags:
   - freebsd
   - unix

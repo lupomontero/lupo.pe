@@ -1,5 +1,4 @@
 ---
-url: https://lupomontero.com/parsing-domain-names-in-node-js-and-the-browser/
 tags:
   - javascript
   - node

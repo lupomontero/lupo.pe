@@ -1,5 +1,4 @@
 ---
-url: https://lupomontero.com/installing-phps-oauth-pecl-extension-on-mac-os-x-snow-leopard/
 tags:
   - osx
   - pecl

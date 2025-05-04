@@ -1,5 +1,4 @@
 ---
-url: https://lupomontero.com/phantomjs-on-smartos/
 tags:
   - phantomjs
   - javascript

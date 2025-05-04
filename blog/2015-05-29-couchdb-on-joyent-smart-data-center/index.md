@@ -1,5 +1,4 @@
 ---
-url: https://lupomontero.com/couchdb-on-joyent-smart-data-center/
 tags:
   - couchdb
   - javascript

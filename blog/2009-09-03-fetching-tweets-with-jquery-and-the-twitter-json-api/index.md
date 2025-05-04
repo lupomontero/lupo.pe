@@ -1,5 +1,4 @@
 ---
-url: https://lupomontero.com/fetching-tweets-with-jquery-and-the-twitter-json-api/
 tags:
   - ajax
   - javascript

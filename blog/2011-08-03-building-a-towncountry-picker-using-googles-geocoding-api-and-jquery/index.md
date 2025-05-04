@@ -1,5 +1,4 @@
 ---
-url: https://lupomontero.com/building-a-towncountry-picker-using-googles-geocoding-api-and-jquery/
 tags:
   - geocoding
   - javascript

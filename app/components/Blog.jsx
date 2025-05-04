@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router';
-// import { CommentCount } from 'disqus-react';
 import { CommentCount } from '../lib/disqus';
 import { fetchJSON } from '../lib/util';
 
@@ -13,7 +12,6 @@ const PostSummary = ({ post }) => (
     </h3>
     <span>{post.publishedAt.toISOString().slice(0, 10)} | </span>
     <CommentCount shortname={'lupomontero'} config={{
-      url: post.url, // legay prop must be replaced with dynamic one??
       identifier: post.id,
       title: post.title,
     }}>

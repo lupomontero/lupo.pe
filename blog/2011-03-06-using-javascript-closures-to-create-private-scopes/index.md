@@ -1,5 +1,4 @@
 ---
-url: https://lupomontero.com/using-javascript-closures-to-create-private-scopes/
 tags:
   - javascript
 author: lupo

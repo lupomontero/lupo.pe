@@ -1,5 +1,4 @@
 ---
-url: https://lupomontero.com/running-node-0-8-x-on-openshift/
 tags:
   - javascript
   - node
