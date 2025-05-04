@@ -1,0 +1,13 @@
+{
+  "id": "jquery-plugin-to-fetch-tweets-using-the-twitter-json-api",
+  "title": "jQuery plugin to fetch tweets using the Twitter JSON API",
+  "url": "https://lupomontero.com/jquery-plugin-to-fetch-tweets-using-the-twitter-json-api/",
+  "tags": [
+    "javascript",
+    "jquery",
+    "twitter"
+  ],
+  "author": "lupo",
+  "publishedAt": "2011-10-10T00:00:00.000Z",
+  "body": "<p>Over a year ago I posted a script showing how you could\n<a href=\"https://lupomontero.com/jquery-plugin-to-fetch-tweets-using-the-twitter-json-api/fetching-tweets-with-jquery-and-the-twitter-json-api/\">fetch tweets using jQuery and Twitter’s JSON API</a>,\nand to my surprise it has had a decent amount of traffic. So now that I’ve been\nlearning more JavaScript and jQuery I decided to re-write the script as a jQuery\nplugin.</p>\n<p>The plugin allows for much easier re-use and integration as well as adding some\nfeatures like optionally showing the users profile data and autorefresh.</p>\n<p>Once jQuery and the plugin are loaded you can load a user’s tweets as simple as:</p>\n<pre><code class=\"language-js\">$('#some-element').fetchTweets({\n  username: 'some-twitter-user'\n});\n</code></pre>\n<p>Hope you enjoy!</p>\n<ul>\n<li><a href=\"http://e-noise.github.com/jQuery.fetchTweets/\">The demo</a></li>\n<li><a href=\"https://github.com/E-NOISE/jQuery.fetchTweets\">The source code</a></li>\n</ul>"
+}

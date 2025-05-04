@@ -1,0 +1,14 @@
+{
+  "id": "fetching-tweets-with-jquery-and-the-twitter-json-api",
+  "title": "Fetching tweets with jQuery and the Twitter JSON API",
+  "url": "https://lupomontero.com/fetching-tweets-with-jquery-and-the-twitter-json-api/",
+  "tags": [
+    "ajax",
+    "javascript",
+    "jquery",
+    "twitter"
+  ],
+  "author": "lupo",
+  "publishedAt": "2009-09-03T00:00:00.000Z",
+  "body": "<p>Just thought it’d be nice to share this little script that fetches tweets using\na jQuery AJAX request and the Twitter API. The script is based on a snippet I\npicked up from my good friend Sven Lito.</p>\n<p>I’ve added verbose comments in the code itself, so let’s keep this post short 😉</p>\n<p>This post is pretty old… I posted a newer version of something like this here.</p>\n<p>The <a href=\"https://gist.github.com/lupomontero/2245759\">javascript</a>:</p>\n<pre><code class=\"language-js\">$(document).ready(function() {\n  // Declare variables to hold twitter API url and user name\n  var twitter_api_url = 'http://search.twitter.com/search.json';\n  var twitter_user    = 'lupomontero';\n\n  // Enable caching\n  $.ajaxSetup({ cache: true });\n\n  // Send JSON request\n  // The returned JSON object will have a property called \"results\" where we find\n  // a list of the tweets matching our request query\n  $.getJSON(\n    twitter_api_url + '?callback=?&#x26;rpp=5&#x26;q=from:' + twitter_user,\n    function(data) {\n      $.each(data.results, function(i, tweet) {\n        // Uncomment line below to show tweet data in Fire Bug console\n        // Very helpful to find out what is available in the tweet objects\n        //console.log(tweet);\n\n        // Before we continue we check that we got data\n        if(tweet.text !== undefined) {\n          // Calculate how many hours ago was the tweet posted\n          var date_tweet = new Date(tweet.created_at);\n          var date_now   = new Date();\n          var date_diff  = date_now - date_tweet;\n          var hours      = Math.round(date_diff/(1000*60*60));\n\n          // Build the html string for the current tweet\n          var tweet_html = '&#x3C;div class=\"tweet_text\">';\n          tweet_html    += '&#x3C;a href=\"http://www.twitter.com/';\n          tweet_html    += twitter_user + '/status/' + tweet.id + '\">';\n          tweet_html    += tweet.text + '&#x3C;\\/a>&#x3C;\\/div>';\n          tweet_html    += '&#x3C;div class=\"tweet_hours\">' + hours;\n          tweet_html    += ' hours ago&#x3C;\\/div>';\n\n          // Append html string to tweet_container div\n          $('#tweet_container').append(tweet_html);\n        }\n      });\n    }\n  );\n});\n</code></pre>\n<p>The <a href=\"https://gist.github.com/lupomontero/2245762\">markup</a>:</p>\n<pre><code class=\"language-html\">&#x3C;div id=\"tweet_container\">&#x3C;/div>\n</code></pre>"
+}
