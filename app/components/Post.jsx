@@ -1,4 +1,4 @@
-import { useParams } from 'react-router-dom';
+import { useParams } from 'react-router';
 import { DiscussionEmbed } from 'disqus-react';
 
 const Post = ({ posts }) => {

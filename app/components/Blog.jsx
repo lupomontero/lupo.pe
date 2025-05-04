@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Link } from '@remix-run/react';
+import { Link } from 'react-router';
 import { CommentCount } from 'disqus-react';
 import { fetchJSON } from '../util';
 

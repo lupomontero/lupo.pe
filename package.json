@@ -6,24 +6,24 @@
   "homepage": "https://lupomontero.com",
   "scripts": {
     "build:blog": "./blog/build.js",
-    "build": "remix vite:build",
-    "dev": "remix vite:dev --host",
-    "start": "remix-serve build/server/index.js",
+    "build": "react-router build",
+    "dev": "react-router dev",
+    "start": "react-router-serve build/server/index.js",
     "predeploy": "npm run build",
     "deploy": "firebase deploy --only hosting"
   },
   "dependencies": {
-    "@remix-run/node": "^2.16.5",
-    "@remix-run/react": "^2.16.5",
-    "@remix-run/serve": "^2.16.5",
+    "@react-router/node": "^7.0.0",
+    "@react-router/serve": "^7.0.0",
     "disqus-react": "^1.1.6",
     "isbot": "^4.4.0",
     "prop-types": "^15.8.1",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "react-router": "^7.0.0"
   },
   "devDependencies": {
-    "@remix-run/dev": "^2.16.5",
+    "@react-router/dev": "^7.0.0",
     "js-yaml": "^4.1.0",
     "rehype-stringify": "^10.0.1",
     "remark-parse": "^11.0.0",

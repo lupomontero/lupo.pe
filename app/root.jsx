@@ -1,9 +1,4 @@
-import {
-  Links,
-  Meta,
-  Outlet,
-  Scripts,
-} from '@remix-run/react';
+import { Links, Meta, Outlet, Scripts } from 'react-router';
 import Header from './components/Header';
 import appStylesHref from './root.css?url';
 
