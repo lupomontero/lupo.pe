@@ -29,7 +29,7 @@
     "remark-parse": "^11.0.0",
     "remark-rehype": "^11.1.2",
     "unified": "^11.0.5",
-    "vite": "^6.3.4"
+    "vite": "^6.3.6"
   },
   "browserslist": {
     "production": [
