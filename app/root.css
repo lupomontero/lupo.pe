@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   background: #111;
@@ -7,7 +8,8 @@ html, body {
   font-family: 'Roboto Mono', monospace;
 }
 
-h1, h2 {
+h1,
+h2 {
   color: #006633;
   font-family: "VT323", monospace;
   text-transform: uppercase;
@@ -44,11 +46,11 @@ pre {
   margin: 0 auto;
 }
 
-.App > header {
+.App>header {
   margin-bottom: 40px;
 }
 
-.Blog > article {
+.Blog>article {
   border-top: 1px solid #006666;
   padding-bottom: 20px;
 }
@@ -58,7 +60,7 @@ pre {
   justify-content: center;
 }
 
-.Social > div {
+.Social>div {
   margin: 0 5px;
 }
 
@@ -74,8 +76,8 @@ pre {
   fill: lime;
 }
 
-.Stuff > div,
-.Talks > div {
+.Stuff>div,
+.Talks>div {
   display: flex;
   width: 100%;
   justify-content: center;
@@ -84,8 +86,8 @@ pre {
   margin-bottom: 40px;
 }
 
-.Stuff > div > a,
-.Talks > div > a {
+.Stuff>div>a,
+.Talks>div>a {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -99,8 +101,8 @@ pre {
   padding: 5px;
 }
 
-.Stuff > div > a:hover,
-.Talks > div > a:hover {
+.Stuff>div>a:hover,
+.Talks>div>a:hover {
   color: #ccc;
   background-image: none !important;
 }
