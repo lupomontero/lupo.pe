@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router';
 import { fetchJSON } from '../lib/util';
 import Blog from '../components/Blog';
 import Stuff from '../components/Stuff';
@@ -28,6 +29,13 @@ const IndexRoute = () => {
 
   return (
     <>
+      <p>
+        Freelance Consultant, Software dev, JavaScripter, hacker, musician and
+        UNIX man.
+      </p>
+      <p>
+        <Link to="/hire">Hire me</Link>
+      </p>
       <Stuff stuff={data.stuff} />
       <Talks talks={data.talks} />
       <Blog />

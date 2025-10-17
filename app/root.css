@@ -39,6 +39,109 @@ pre {
   color: #999;
 }
 
+input {
+  background: #333;
+  color: #999;
+  border: 1px solid #006666;
+  padding: 5px;
+}
+
+input:focus {
+  outline: none;
+  border: 1px solid #009688;
+}
+
+input::placeholder {
+  color: #999;
+}
+
+input[type="text"] {
+  width: 100%;
+}
+
+input[type="email"] {
+  width: 100%;
+}
+
+input[type="password"] {
+  width: 100%;
+}
+
+input[type="url"] {
+  width: 100%;
+}
+
+input[type="submit"] {
+  background: #006666;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background: #009688;
+}
+
+input[type="submit"]:focus {
+  outline: none;
+  background: #009688;
+}
+
+input[type="submit"]:active {
+  background: #00796b;
+}
+
+input[type="submit"]:disabled {
+  background: #333;
+  cursor: not-allowed;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+fieldset {
+  border: 1px solid #006666;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+legend {
+  font-size: 1.2em;
+  color: #006666;
+}
+
+textarea {
+  background: #333;
+  color: #999;
+  border: 1px solid #006666;
+  padding: 5px;
+  width: 100%;
+}
+
+textarea:focus {
+  outline: none;
+  border: 1px solid #009688;
+}
+
+textarea::placeholder {
+  color: #999;
+}
+
+button {
+  background: #006666;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.form-field {
+  margin-bottom: 20px;
+}
+
 .App {
   padding: 30px;
   text-align: center;
