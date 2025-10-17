@@ -1,7 +1,6 @@
 {
   "id": "running-node-0-8-x-on-openshift",
   "title": "Running nodejs 0.8.x (or any other version) on OpenShift",
-  "url": "https://lupomontero.com/running-node-0-8-x-on-openshift/",
   "tags": [
     "javascript",
     "node",

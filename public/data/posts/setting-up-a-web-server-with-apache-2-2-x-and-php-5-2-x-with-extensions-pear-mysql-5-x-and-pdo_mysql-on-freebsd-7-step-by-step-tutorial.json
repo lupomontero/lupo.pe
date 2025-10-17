@@ -1,7 +1,6 @@
 {
   "id": "setting-up-a-web-server-with-apache-2-2-x-and-php-5-2-x-with-extensions-pear-mysql-5-x-and-pdo_mysql-on-freebsd-7-step-by-step-tutorial",
   "title": "Setting up a web server with Apache 2.2.x and PHP 5.2.x with extensions, PEAR, MySQL 5.x and pdo_mysql on FreeBSD 7 step by step tutorial",
-  "url": "https://lupomontero.com/setting-up-a-web-server-with-apache-2-2-x-and-php-5-2-x-with-extensions-pear-mysql-5-x-and-pdo_mysql-on-freebsd-7-step-by-step-tutorial/",
   "tags": [
     "apache",
     "freebsd",
