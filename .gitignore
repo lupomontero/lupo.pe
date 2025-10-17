@@ -24,3 +24,5 @@ yarn-error.log*
 
 .firebase/
 .firebaserc
+
+.react-router/
