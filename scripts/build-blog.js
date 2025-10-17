@@ -1,7 +1,8 @@
 #! /usr/bin/env node
 
-import { readdir, readFile, stat, writeFile, mkdir } from 'node:fs/promises';
+import { execSync } from 'node:child_process';
 import path from 'node:path';
+import { readdir, readFile, stat, writeFile, mkdir } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import { unified } from 'unified';
 import remarkParse from 'remark-parse';
@@ -11,8 +12,34 @@ import yaml from 'js-yaml';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
+const replaceMermaidCodeBlocks = ({ children, ...node }) => {
+  if (node.type !== 'code' || node.lang !== 'mermaid') {
+    return {
+      ...node,
+      children: children?.map(replaceMermaidCodeBlocks),
+    };
+  }
+
+  const stdout = execSync(`cat <<EOF | npx mmdc -i - -o - -e svg -t dark -b transparent
+${node.value}
+EOF`);
+
+  return {
+    type: 'image',
+    title: null,
+    url: `data:image/svg+xml;base64,${Buffer.from(stdout).toString('base64')}`,
+    alt: '',
+  };
+};
+
+const unifiedMermaidPlugin = () => (tree) => {
+  return replaceMermaidCodeBlocks(tree);
+  // return tree;
+};
+
 const parser = unified()
   .use(remarkParse)
+  .use(unifiedMermaidPlugin)
   .use(remarkRehype)
   .use(rehypeStringify);
 
@@ -36,16 +63,17 @@ const splitMetaAndContent = (text) => {
 };
 
 const main = async () => {
-  const sourceDir = path.join(__dirname);
+  const sourceDir = path.join(__dirname, '../blog');
   const destinationDir = path.join(__dirname, '../public/data');
   const files = await readdir(sourceDir);
-  const dirs = await Promise.all(files.map(file => stat(path.join(sourceDir, file))))
+  const filteredFiles = files.filter(file => !file.startsWith('.'));
+  const dirs = await Promise.all(filteredFiles.map(file => stat(path.join(sourceDir, file))))
     .then(stats => stats.reduce(
       (memo, stat, idx) => {
         if (!stat.isDirectory()) {
           return memo;
         }
-        return memo.concat(files[idx]);
+        return memo.concat(filteredFiles[idx]);
       },
       [],
     ));

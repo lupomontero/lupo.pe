@@ -5,7 +5,7 @@
   "private": true,
   "homepage": "https://lupomontero.com",
   "scripts": {
-    "build:blog": "./blog/build.js",
+    "build:blog": "./scripts/build-blog.js",
     "build": "react-router build",
     "dev": "react-router dev",
     "start": "react-router-serve build/server/index.js",
